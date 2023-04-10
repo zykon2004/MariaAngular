@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "DEBUG",
+            "type": "node",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "preLaunchTask": "npm: build",
+            "program": "${workspaceRoot}/src/index.ts",
+            "request": "launch",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "outFiles": ["${workspaceFolder}/dist/*.js"],
+            "runtimeExecutable": null,
+            "sourceMaps": true,
+            "stopOnEntry": false,
+        },
+        {
+            "name": "Attach",
+            "type": "node",
+            "request": "attach",
+            "port": 5858
+        }
+    ]
+}
